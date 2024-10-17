@@ -1,10 +1,9 @@
 #include<iostream>
 using namespace std;
 
-
 int main()
 {
-    cout << "أهلًا" << endl;
+    cout << "How are you," << endl << "\t \t Ahmed?";
 
     return 0;
 }
