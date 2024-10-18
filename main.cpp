@@ -2,11 +2,10 @@
 using namespace std;
 
 int main(){
-    int a, b, c;
+    
+    const int user_id = 814;
 
-    a = 10, b = 50, c = 20;
-
-    cout << "sum = " << a + b + c;
+    cout << "You can't change your id, " << user_id;
 
     return 0;
 }
