@@ -1,16 +1,13 @@
+// 	1926A - Vlad and the Best of Five
+
 #include<bits/stdc++.h>
 using namespace std;
 
-// Macro to optimize input/output operations
 #define egry ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-
-// Macro to define long long as ll for convenience
 #define ll long long
 
-// Function to handle input/output file redirection
 void io_handler() {
     #ifndef ONLINE_JUDGE
-    // Redirect input from "input.txt" and output to "output.txt"
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
@@ -18,10 +15,8 @@ void io_handler() {
 
 
 int main() {
-    // Call the function to handle I/O redirection
     io_handler();
     
-    // Optimize I/O
     egry;
 
     int t;
