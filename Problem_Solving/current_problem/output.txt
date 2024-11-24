@@ -1,8 +1,2 @@
-B B
-A A
-B B
-A A
-B B
-A A
-A A
-A A
+Folka
+Folka

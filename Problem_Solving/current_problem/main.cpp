@@ -1,16 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Macro to optimize input/output operations
 #define egry ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-
-// Macro to define long long as ll for convenience
 #define ll long long
 
-// Function to handle input/output file redirection
 void io_handler() {
     #ifndef ONLINE_JUDGE
-    // Redirect input from "input.txt" and output to "output.txt"
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
@@ -18,32 +13,30 @@ void io_handler() {
 
 
 int main() {
-    // Call the function to handle I/O redirection
     io_handler();
-    
-    // Optimize I/O
     egry;
 
     int t;
     cin >> t;
     while(t--){
+        int n;
+        cin >> n;
+        string correct_ans;
+        cin >> correct_ans;
+        string f;
+        cin >> f;
+        string a;
+        cin >> a;
 
-
-        string str;
-        cin >> str;
-        
-        int str_length = str.length();
-
-        int a_count = 0;
-        int b_count = 0;
-        for (int i = 0; i < str_length; i++){
-            if(str[i] == 'A') a_count++;
-            else b_count++;
+        int a_score = 0;
+        int f_score = 0;
+        for(int i = 0; i < n; i++){
+            if(a[i] == correct_ans[i] || a[i] == '?') a_score++;
+            if(f[i] == correct_ans[i] || f[i] == '?') f_score++;
         }
 
-        a_count > b_count? cout << 'A': cout << 'B';
-        cout << endl;
-        
+        string output = (a_score == f_score)? "Abdo":(a_score > f_score)? "Abdo":"Folka";
+        cout << output << endl;
     }
 
     return 0;
