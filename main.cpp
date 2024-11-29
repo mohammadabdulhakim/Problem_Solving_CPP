@@ -1,35 +1,34 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int n1, n2, ope;
-    cout << "Enter your first number\n";
-    cin >> n1;
-    cout << "Enter your first number\n";
-    cin >> n2;
-    cout << "Enter the operation\n 1 > [+]\n 2 > [-]\n 3 > [*] \n 4 > [/]\n";
-    cin >> ope;
 
-    switch (ope)
-    {
-    case 1:
-        cout << n1 << " + " << n2 << " = " << n1 + n2;
-        break;
-    case 2:
-        cout << n1 << " - " << n2 << " = " << n1 - n2;
-        break;
-    case 3:
-        cout << n1 << " * " << n2 << " = " << n1 * n2;
-        break;
-    case 4:
-        cout << n1 << " / " << n2 << " = " << n1 / n2;
-        break;
-    default:
-        cout << "Choose a valid operation";
-    }
+int main(){
 
-    cout << endl;
+    int points = 0;
+    int answers[3];
+
+    int sequences[3][4] = {
+        {1,5,9, 13},
+        {2,4,8,16},
+        {125,25,5,1}
+    };
+
+
+    string message = "Write the last number in this sequence: ";
+
+    cout << message << "[1, 5, 9, ...] : ";
+    cin >> answers[0];
+    cout << message << "[2, 4, 8, ...] : ";
+    cin >> answers[1];
+    cout << message << "[125, 25, 5, ...] : ";
+    cin >> answers[2];
+
+    if(answers[0] == sequences[0][3]) points++;
+    if(answers[1] == sequences[1][3]) points++;
+    if(answers[2] == sequences[2][3]) points++;
+    
+
+    cout << "Your score: " << points << endl;
 
     return 0;
 }
