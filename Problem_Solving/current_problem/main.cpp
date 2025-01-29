@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
 using namespace std;
 
 #define egry ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
@@ -16,28 +17,43 @@ int main() {
     io_handler();
     egry;
 
-    int t;
-    cin >> t;
-    while(t--){
-        int n;
-        cin >> n;
-        string correct_ans;
-        cin >> correct_ans;
-        string f;
-        cin >> f;
-        string a;
-        cin >> a;
+    int n;
+    cin >> n;
 
-        int a_score = 0;
-        int f_score = 0;
-        for(int i = 0; i < n; i++){
-            if(a[i] == correct_ans[i] || a[i] == '?') a_score++;
-            if(f[i] == correct_ans[i] || f[i] == '?') f_score++;
+    // int* numbers = new int[n];
+    vector<int> numbers(n);
+    vector<int> output;
+
+    for(int i = 0; i<n; i++){
+        cin >> numbers[i];
+    }
+
+    // Reverse on finding zero
+    for(int i = 0; i < n; i++){
+        if(numbers[i] == 0){
+            for(int end = i-1, start = 0 ; start < end; end--, start++){
+                int temp = output[start];
+                output[start] = output[end];
+                output[end] = temp;
+            }
         }
 
-        string output = (a_score == f_score)? "Abdo":(a_score > f_score)? "Abdo":"Folka";
-        cout << output << endl;
+        output.push_back(numbers[i]);
+    }
+
+
+    // Print the output
+    for(int num :output){
+        cout << num << " ";
     }
 
     return 0;
 }
+
+/*
+
+loop on the array:
+    if number != 0, add the number to a temp array
+    else number == 0, reverse the the temp array and add their elements to the output
+
+*/
