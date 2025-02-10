@@ -1,4 +1,4 @@
-// https://codeforces.com/contest/{contest}/problem/{problem}
+// https://codeforces.com/contest/2009/problem/B
 
 
 #include <iostream>

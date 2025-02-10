@@ -1,4 +1,4 @@
-//  1999A A + B Again?
+// https://codeforces.com/contest/1999/problem/A
 
 #include<bits/stdc++.h>
 using namespace std;
