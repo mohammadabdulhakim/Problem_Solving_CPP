@@ -1,8 +1,7 @@
-// https://codeforces.com/contest/{contest}/problem/{problem}
+// https://codeforces.com/contest/1985/problem/B
 
 
 #include <iostream>
-
 using namespace std;
 
 void io_handler()
