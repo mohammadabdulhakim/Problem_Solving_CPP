@@ -1,4 +1,4 @@
-// https://codeforces.com/contest/{contest}/problem/{problem}
+// https://codeforces.com/contest/1926/problem/B
 
 #include <iostream>
 #include <vector>
