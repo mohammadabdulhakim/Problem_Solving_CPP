@@ -1,4 +1,4 @@
-// https://codeforces.com/contest/{contest}/problem/{problem}
+// https://codeforces.com/contest/1915/problem/C
 
 #include <iostream>
 #include <vector>
@@ -18,7 +18,8 @@ void io_handler()
 
 bool hasSqrt(ll num)
 {
-    return ((sqrt(num) * sqrt(num)) == num);
+    ll root = sqrt(num);
+    return ((root * root) == num);
 }
 
 
